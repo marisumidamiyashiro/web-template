@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+// COLORS
+
+$accent-color: rgba(143, 22, 0, 1);
+$body-color: rgb(53, 53, 53);
+$link-color: rgba(179, 33, 19, 1);
+$beige: rgb(221, 174, 129);
+$eggshell: rgb(255, 249, 244);
+
+
+// STOCKROOM COLOR KEYS
+$salon-color: pink;
+$corner-color: rgb(255, 212, 132);
+$shoes-color: rgb(162, 185, 136);
+$petite-color: rgb(125, 186, 255);
+
+// FONTS
+
+$title: el-grande, sans-serif;
+$link: niveau-grotesk-small-caps, sans-serif;
+
+// IMPORTS
+
+// @import "partials/media";
+
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";

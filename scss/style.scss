@@ -21,13 +21,8 @@ $petite-color: rgb(125, 186, 255);
 
 // FONTS
 
-$title: el-grande, sans-serif;
-$link: niveau-grotesk-small-caps, sans-serif;
-
 // IMPORTS
 
-// @import "partials/media";
-
-// @import "partials/header";
-// @import "partials/main";
-// @import "partials/footer";
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";

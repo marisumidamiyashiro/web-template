@@ -1,0 +1,122 @@
+// SITE MAIN
+
+
+// HERO INTRODUCTION SECTION
+.hero {
+    // border: 1px solid gold;
+    // margin: 1em 0;
+    background-image: url("../img/mt-fuji.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 15em 1em 5em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.75)), url("../img/mt-fuji.jpg");
+    font-family: $font-main;
+
+    h2 {
+        // border: 1px solid red;
+        color: rgba(255, 255, 255, 0.75);
+        text-transform: uppercase;
+        font-size: 6em;
+        justify-self: end;
+        mix-blend-mode: lighten;
+    }
+
+    p {
+        // border: 1px solid gray;
+        margin: 1em 0;
+        padding: 1em;
+        color: $dark-blue;
+        font-weight: 600;
+        line-height: 1.5;
+        width: 60%;
+        align-self: center;
+        font-size: 1em;
+        // mix-blend-mode: color-burn;
+    }
+
+    button {
+        border: 1px solid $light-blue;
+        border-radius: 10px;
+        background-color: white;
+        width: 150px;
+        align-self: center;
+        padding: 15px 25px;
+
+        a {
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 16px;
+            color: $link-color;
+        }
+    }
+}
+
+// PROJECTS SECTION
+
+.project-list {
+    font-family: $font-main;
+
+    h2 {
+        text-align: center;
+        padding: 1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        background-color: $link-color;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+        .project-image {
+            border: 1px solid green;
+            margin: 1em;
+
+            img {
+                width: 500px;
+                height: 350px;
+                object-fit: cover;
+            }
+        }
+
+        .project-blurb {
+            border: 1px solid red;
+            margin: 1em;
+            padding: 1em;
+            width: 35%;
+
+            h3 {
+                font-weight: 700;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: $header-color;
+                margin: 1em 0;
+            }
+
+            p {
+                font-family: $font-secondary;
+                font-weight: 400;
+                line-height: 1.5;
+                // font-size: 20px;
+                margin: 1em 0;
+            }
+
+            a {
+                color: $link-color;
+                margin: 1em 0;
+            }
+        }
+
+
+    }
+
+
+}

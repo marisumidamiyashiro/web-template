@@ -1,3 +1,62 @@
+// SITE HEADER
+
 .site-header {
-    border: 2px red;
+    // border: 2px solid red;
+    // margin: 1em auto;
+    // padding: 0 1em;
+    position: sticky;
+    background-color: transparent;
+    overflow: hidden;
+
+    .site-id {
+        // border: 2px solid yellow;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo-mark {
+            // border: 2px solid orange;
+            // padding: 1em;
+            // margin: 1em;
+            overflow: hidden;
+
+            img {
+                height: 80px;
+            }
+        }
+
+        .site-nav {
+            // border: 2px solid blue;
+            margin: .5em;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-family: $font-main;
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 1.5;
+                font-weight: 600;
+
+                li {
+                    // border: 1px solid green;
+                    overflow: hidden;
+
+                    a {
+                        // border: 1px solid blue;
+                        text-decoration: none;
+                        color: $dark-blue;
+                        padding: 1em;
+                        margin: 1em;
+
+                        &:hover {
+                            color: $light-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -32,9 +32,8 @@
 
                     <ul>
                         <li><a href="index.html">home</a></li>
-                        <li><a href="project-1.html">project 1</a></li>
-                        <li><a href=" project-2.html">project 2</a></li>
-                        <li><a href="about-me.html">about me</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#about-me">about me</a></li>
                     </ul>
                 </div>
             </nav>
@@ -43,21 +42,21 @@
 
     <main class="site-main">
 
-        <section class="hero">
+        <section id="home" class="hero">
             <h2>Introduction</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio deserunt laborum ipsam esse
                 doloremque reiciendis consequuntur quia soluta accusamus neque repellat cupiditate, iusto excepturi,
                 quasi suscipit velit dolor minus! Ipsam.</p>
-            <button><a href="about-me.html">about me!</a></button>
+            <button><a href="#about-me">about me!</a></button>
         </section>
 
-        <section class="project-list scroll-triggered">
+        <section id="projects" class="project-list scroll-triggered">
 
             <h2>My projects</h2>
 
             <div class="project-container">
                 <div class="project-image">
-                    <img src="../img/social-media-campaign.png" alt="Social Media Campaign project">
+                    <img src="img/social-media-campaign.png" alt="Social Media Campaign project">
                 </div>
                 <div class="project-blurb">
                     <h3>project title</h3>
@@ -74,7 +73,7 @@
 
             <div class="project-container">
                 <div class="project-image">
-                    <img src="../img/website-screenshot.png" alt="screenshot of website project">
+                    <img src="img/website-screenshot.png" alt="screenshot of website project">
                 </div>
                 <div class="project-blurb">
                     <h3>project title</h3>
@@ -87,11 +86,32 @@
                     <a href="#">Learn More!</a>
                 </div>
             </div>
-
+        </section>
+        <section id="about-me" class="about-me">
+            <h2>About Me</h2>
+            <div class="about-me-container">
+                <img src="img/about-me.jpg" alt="">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad dolor dolorum maiores eveniet, sed
+                    magnam beatae quasi! Maiores placeat deleniti omnis maxime nemo animi totam, fuga eligendi eum id
+                    minus fugit nobis tenetur deserunt eaque consequuntur neque harum optio facilis quisquam fugiat?
+                    Esse vitae illum vel magnam, quaerat expedita quisquam. Itaque architecto nisi odio ipsum possimus
+                    adipisci accusamus ducimus veritatis dolor placeat, quae odit obcaecati sed deserunt modi et eveniet
+                    nobis. Facilis ipsum quae, rerum reiciendis animi eius, voluptatum, inventore quod neque assumenda
+                    eveniet. Facilis delectus ullam suscipit modi labore autem voluptatibus eos corrupti, corporis
+                    consequuntur magnam harum reiciendis qui.</p>
+            </div>
         </section>
     </main>
 
-
+    <footer class="footer">
+        <div class="contact-info">
+            <h2>contact</h2>
+            <ul class="contact-links">
+                <li><a href="#">email</a></li>
+                <li><a href="#">instagram</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

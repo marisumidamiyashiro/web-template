@@ -78,8 +78,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(255, 255, 255, 0.75))), url("../img/mt-fuji.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.75)), url("../img/mt-fuji.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 0, 131, 0.5)), to(rgba(255, 255, 255, 0.75))), url("../img/mt-fuji.jpg");
+  background-image: linear-gradient(rgba(13, 0, 131, 0.5), rgba(255, 255, 255, 0.75)), url("../img/mt-fuji.jpg");
   font-family: "inter", sans-serif;
 }
 .hero h2 {
@@ -138,6 +138,8 @@
   background-color: #576CA8;
 }
 .project-list .project-container {
+  border-radius: 50px;
+  background-color: #1B264F;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,6 +153,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 2em 1em;
+}
+.project-list .project-container.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 .project-list .project-container .project-image {
   margin: 1em;
@@ -187,6 +196,7 @@
   padding: 0.5em 0 0 0.5em;
 }
 .project-list .project-container .project-blurb .project-title p {
+  color: white;
   font-family: "source serif 4", serif;
   margin: 0 1.5em;
 }
@@ -217,24 +227,33 @@
   margin-bottom: 0.5em;
   text-decoration: underline;
   text-underline-offset: 7px;
-  text-decoration-color: #1B264F;
+  text-decoration-color: #576CA8;
 }
 .project-list .project-container .project-blurb .project-stats .project-info .project-details span {
-  color: #576da8;
+  color: white;
   font-size: 0.75em;
   text-transform: capitalize;
   margin: 0.25em 0;
 }
 .project-list .project-container .project-blurb a {
-  border: 1px solid white;
   color: #576CA8;
   margin: 0 2em;
   padding: 1em 0;
   text-underline-offset: 7px;
 }
+.project-list .project-container .project-blurb a:hover {
+  color: white;
+}
 
 .about-me {
+  overflow: hidden;
   font-family: "inter", sans-serif;
+  background-image: url("../img/about-me.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 750px;
 }
 .about-me h2 {
   text-align: center;
@@ -244,29 +263,35 @@
   color: white;
   background-color: #576CA8;
 }
-.about-me img {
-  width: 100%;
-  height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 10% 45%;
-     object-position: 10% 45%;
+.about-me .about-me-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  -ms-grid-column-align: right;
+      justify-self: right;
+  margin: 10em 3em;
+  width: 30%;
 }
-.about-me p {
+.about-me .about-me-container .about-me-blurb {
+  margin: 2em 0 1em 0;
+}
+.about-me .about-me-container .about-me-blurb p {
   border-left: 2px solid #1B264F;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  width: 50%;
-  margin: 2em;
-  padding: 0 2em;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  margin: 0 2em;
+  padding: 1.5em;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.5em;
   color: #1B264F;
 }
+.about-me .about-me-container .about-me-blurb p span {
+  font-family: "style script", cursive;
+  font-size: 3em;
+}
 
 .footer {
-  border: 1px solid blue;
   width: 100%;
   background-image: url("../img/mt-fuji.jpg");
   position: absolute;
@@ -293,6 +318,7 @@
 .footer .contact-info h2 {
   text-transform: uppercase;
   font-weight: 800;
+  color: white;
 }
 .footer .contact-info ul {
   margin: 1em 0;

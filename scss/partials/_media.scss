@@ -1,0 +1,105 @@
+// MEDIA QUERIES
+
+@media (max-width: 767px) {
+
+    // HERO INTRODUCTION SECTION
+
+    .hero {
+        padding: 0;
+
+        p {
+            width: 95%;
+        }
+
+        button {
+            margin: 1em;
+        }
+    }
+
+    // PROJECT SECTION
+
+    .project-container {
+        border-bottom: 1px solid white;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 0 !important;
+        border-radius: 0px !important;
+
+        .project-image {
+
+            img {
+                height: 250px !important;
+                object-fit: cover;
+            }
+        }
+
+        .project-blurb {
+
+            width: 100%;
+            display: flex;
+            flex-direction: row !important;
+            align-items: center;
+            justify-content: space-between;
+
+            .project-title {
+                border: none !important;
+                width: 60%;
+            }
+
+            .project-stats {
+                margin: 1em 0 !important;
+
+                .project-info {
+                    .project-details {
+                        visibility: hidden;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+    // ABOUT ME SECTION
+
+    .about-me {
+        background: none;
+        background-color: $dark-blue;
+        align-items: center;
+
+        .about-me-container {
+            background-color: transparent;
+            margin: 1em;
+            // height: 100%;
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+
+
+            .small-screen {
+                position: relative;
+                top: 0;
+                left: 0;
+                height: 250px;
+                width: 250px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin: 1em 0;
+            }
+
+            .about-me-blurb {
+                margin: .5em !important;
+                // width: 100%;
+
+                p {
+                    color: white;
+                    border: none;
+                    margin: 3em 0 0 0;
+                    padding: 2em 0;
+                    // border: 1px solid red;
+                }
+            }
+        }
+    }
+}

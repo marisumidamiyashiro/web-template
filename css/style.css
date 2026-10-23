@@ -165,7 +165,9 @@
   margin: 1em;
 }
 .project-list .project-container .project-image img {
-  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
   height: 340px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -173,7 +175,6 @@
 .project-list .project-container .project-blurb {
   margin: 0 1em;
   padding: 2em 0;
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,11 +187,11 @@
           align-items: left;
 }
 .project-list .project-container .project-blurb .project-title {
-  border-left: 3px solid #1B264F;
+  border-left: 3px solid #576da8;
 }
 .project-list .project-container .project-blurb .project-title h3 {
   font-weight: 800;
-  font-size: 3em;
+  font-size: clamp(1em, 5vw, 3em);
   text-transform: uppercase;
   color: #576da8;
   padding: 0.5em 0 0 0.5em;
@@ -198,6 +199,7 @@
 .project-list .project-container .project-blurb .project-title p {
   color: white;
   font-family: "source serif 4", serif;
+  font-size: clamp(0.5em, 5vw, 1em);
   margin: 0 1.5em;
 }
 .project-list .project-container .project-blurb .project-stats {
@@ -222,7 +224,7 @@
   font-family: "source serif 4", serif;
   color: #576da8;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: clamp(0.5em, 3vw, 1.5em);
   text-transform: uppercase;
   margin-bottom: 0.5em;
   text-decoration: underline;
@@ -272,6 +274,11 @@
   margin: 10em 3em;
   width: 30%;
 }
+.about-me .about-me-container .small-screen {
+  position: absolute;
+  top: -10000px;
+  left: -1000px;
+}
 .about-me .about-me-container .about-me-blurb {
   margin: 2em 0 1em 0;
 }
@@ -282,13 +289,13 @@
   margin: 0 2em;
   padding: 1.5em;
   font-weight: 400;
-  font-size: 1em;
+  font-size: clamp(0.5em, 3vw, 1em);
   line-height: 1.5em;
   color: #1B264F;
 }
 .about-me .about-me-container .about-me-blurb p span {
   font-family: "style script", cursive;
-  font-size: 3em;
+  font-size: clamp(3em, 3vw, 5em);
 }
 
 .footer {
@@ -345,4 +352,100 @@
 }
 .footer .other-stuff {
   margin: 2em;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 0;
+  }
+  .hero p {
+    width: 95%;
+  }
+  .hero button {
+    margin: 1em;
+  }
+  .project-container {
+    border-bottom: 1px solid white;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 !important;
+    border-radius: 0px !important;
+  }
+  .project-container .project-image img {
+    height: 250px !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .project-container .project-blurb {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .project-container .project-blurb .project-title {
+    border: none !important;
+    width: 60%;
+  }
+  .project-container .project-blurb .project-stats {
+    margin: 1em 0 !important;
+  }
+  .project-container .project-blurb .project-stats .project-info .project-details {
+    visibility: hidden;
+    position: absolute;
+  }
+  .about-me {
+    background: none;
+    background-color: #1B264F;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-me .about-me-container {
+    background-color: transparent;
+    margin: 1em;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-me .about-me-container .small-screen {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 250px;
+    width: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+    margin: 1em 0;
+  }
+  .about-me .about-me-container .about-me-blurb {
+    margin: 0.5em !important;
+  }
+  .about-me .about-me-container .about-me-blurb p {
+    color: white;
+    border: none;
+    margin: 3em 0 0 0;
+    padding: 2em 0;
+  }
 }

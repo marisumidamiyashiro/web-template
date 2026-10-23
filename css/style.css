@@ -83,12 +83,18 @@
   font-family: "inter", sans-serif;
 }
 .hero h2 {
-  color: rgba(255, 255, 255, 0.75);
-  text-transform: uppercase;
-  font-size: 6em;
-  -ms-grid-column-align: end;
-      justify-self: end;
-  mix-blend-mode: lighten;
+  font-family: "style script", cursive;
+  color: #576da8;
+  text-transform: capitalize;
+  font-size: 8em;
+  mix-blend-mode: color-burn;
+  margin-bottom: -0.25em;
+}
+.hero h3 {
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+  font-size: 2em;
+  margin-top: -0.75em;
 }
 .hero p {
   margin: 1em 0;
@@ -96,7 +102,7 @@
   color: #1B264F;
   font-weight: 600;
   line-height: 1.5;
-  width: 60%;
+  width: 30%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -106,7 +112,7 @@
   border: 1px solid #576da8;
   border-radius: 10px;
   background-color: white;
-  width: 150px;
+  width: 140px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -147,37 +153,84 @@
           align-items: center;
 }
 .project-list .project-container .project-image {
-  border: 1px solid green;
   margin: 1em;
 }
 .project-list .project-container .project-image img {
   width: 500px;
-  height: 350px;
+  height: 340px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .project-list .project-container .project-blurb {
-  border: 1px solid red;
-  margin: 1em;
-  padding: 1em;
-  width: 35%;
+  margin: 0 1em;
+  padding: 2em 0;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
-.project-list .project-container .project-blurb h3 {
-  font-weight: 700;
-  font-size: 24px;
+.project-list .project-container .project-blurb .project-title {
+  border-left: 3px solid #1B264F;
+}
+.project-list .project-container .project-blurb .project-title h3 {
+  font-weight: 800;
+  font-size: 3em;
   text-transform: uppercase;
-  color: #1433A7;
-  margin: 1em 0;
+  color: #576da8;
+  padding: 0.5em 0 0 0.5em;
 }
-.project-list .project-container .project-blurb p {
+.project-list .project-container .project-blurb .project-title p {
   font-family: "source serif 4", serif;
+  margin: 0 1.5em;
+}
+.project-list .project-container .project-blurb .project-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2em;
+}
+.project-list .project-container .project-blurb .project-stats .project-info .project-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.project-list .project-container .project-blurb .project-stats .project-info .project-details h4 {
+  font-family: "source serif 4", serif;
+  color: #576da8;
   font-weight: 400;
-  line-height: 1.5;
-  margin: 1em 0;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-color: #1B264F;
+}
+.project-list .project-container .project-blurb .project-stats .project-info .project-details span {
+  color: #576da8;
+  font-size: 0.75em;
+  text-transform: capitalize;
+  margin: 0.25em 0;
 }
 .project-list .project-container .project-blurb a {
+  border: 1px solid white;
   color: #576CA8;
-  margin: 1em 0;
+  margin: 0 2em;
+  padding: 1em 0;
+  text-underline-offset: 7px;
 }
 
 .about-me {
@@ -200,7 +253,12 @@
      object-position: 10% 45%;
 }
 .about-me p {
-  padding: 2em;
+  border-left: 2px solid #1B264F;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 50%;
+  margin: 2em;
+  padding: 0 2em;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.5em;
@@ -208,10 +266,57 @@
 }
 
 .footer {
+  border: 1px solid blue;
+  width: 100%;
   background-image: url("../img/mt-fuji.jpg");
-  background-position: top;
+  position: absolute;
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), color-stop(rgba(255, 255, 255, 0.5)), to(rgb(255, 255, 255))), url("../img/mt-fuji.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url("../img/mt-fuji.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer .contact-info {
+  margin: 2em;
+  font-family: "inter", sans-serif;
+  color: #1B264F;
+}
+.footer .contact-info h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.footer .contact-info ul {
+  margin: 1em 0;
+}
+.footer .contact-info ul li {
+  margin: 1em 0;
+  overflow: hidden;
+}
+.footer .contact-info ul li a {
+  text-decoration: none;
+  color: #576CA8;
+  font-weight: 600;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .contact-info ul li a svg {
+  margin: 0 1em 0 0;
+}
+.footer .other-stuff {
   margin: 2em;
 }

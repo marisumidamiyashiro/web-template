@@ -1,0 +1,65 @@
+.button-about-me {
+    border: 1px solid $light-blue;
+    border-radius: 15px;
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    align-self: center;
+    transition: color 220ms ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    margin: 1em;
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $dark-blue;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 220ms ease;
+    }
+
+    a {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 1.1em;
+        color: $light-blue;
+        padding: 1em 2.5em;
+        align-items: center;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &:hover,
+    &:focus-visible {
+        color: #ffffff;
+
+        &:before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid $dark-blue;
+        outline-offset: 3px;
+        color: white;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .button-about-me,
+    .button-about-me::before,
+    .button-about-me::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

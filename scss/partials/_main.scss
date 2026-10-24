@@ -20,7 +20,7 @@
         font-family: "style script", cursive;
         color: $light-blue;
         text-transform: capitalize;
-        font-size: 8em;
+        font-size: 9em;
         mix-blend-mode: color-burn;
         margin-bottom: -.25em;
     }
@@ -28,7 +28,8 @@
     h3 {
         color: rgb(255, 255, 255, 1);
         text-transform: capitalize;
-        font-size: 2em;
+        font-weight: 800;
+        font-size: 3em;
         margin-top: -.75em;
     }
 
@@ -39,27 +40,10 @@
         color: $dark-blue;
         font-weight: 600;
         line-height: 1.5;
-        width: 30%;
+        width: 50%;
         align-self: center;
         font-size: 1em;
         // mix-blend-mode: color-burn;
-    }
-
-    button {
-        border: 1px solid $light-blue;
-        border-radius: 10px;
-        background-color: white;
-        width: 140px;
-        align-self: center;
-        padding: 15px 25px;
-
-        a {
-            text-decoration: none;
-            text-transform: capitalize;
-            font-weight: 600;
-            font-size: 16px;
-            color: $link-color;
-        }
     }
 }
 
